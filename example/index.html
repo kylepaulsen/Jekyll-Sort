@@ -1,0 +1,58 @@
+---
+layout: main
+---
+<h1>Hello Jekyll Sort Test!</h1>
+<br><br>
+In my _config.yml I put: <br>
+numbers: [3,1,4,5,2]<br>
+people:<br>
+&nbsp;&nbsp;- name: Dave<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age: 22<br><br>
+    
+&nbsp;&nbsp;- name: Bob<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age: 20<br><br>
+    
+&nbsp;&nbsp;- name: Mark<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age: 17<br><br>
+    
+&nbsp;&nbsp;- name: Alex<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age: 21<br><br>
+    
+&nbsp;&nbsp;- name: Chris<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age: 19<br><br>
+
+jekyll_sort:<br>
+&nbsp;&nbsp;- src: numbers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction: up<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest: numbers_sorted<br><br>
+&nbsp;&nbsp;- src: people<br>
+&nbsp;&nbsp;&nbsp;&nbsp;by: name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction: up<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest: people_sorted_by_name<br><br>
+&nbsp;&nbsp;- src: people<br>
+&nbsp;&nbsp;&nbsp;&nbsp;by: age<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction: down<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest: people_sorted_by_age_desc<br>
+<br><br>
+Here is &#123;&#123; site.numbers }} <br><br>
+{{ site.numbers }}
+<br><br>
+
+here is &#123;&#123; site.numbers_sorted }} <br><br>
+{{ site.numbers_sorted }}
+<br><br>
+
+here is &#123;&#123; site.people }} <br><br>
+{{ site.people }}
+<br><br>
+
+here is &#123;&#123; site.people_sorted_by_name }} <br><br>
+{{ site.people_sorted_by_name }}
+<br><br>
+
+here is &#123;&#123; site.people_sorted_by_age_desc }} <br><br>
+{{ site.people_sorted_by_age_desc }}
+<br><br>
+
+Here is the site var: <br><br>
+{{ site }}

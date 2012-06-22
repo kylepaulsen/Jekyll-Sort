@@ -1,0 +1,31 @@
+h1. JekyllSort
+
+Copyright (c) 2012 Kyle Paulsen. All Rights Reserved.
+Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+
+h2. What is it?
+
+For those of you who have some list and want to sort it in jekyll, this plugin will sort lists of primitives and lists of hashes based on a direction and what to sort on (if needed). It stores the sorted answer in the global site var for usage. If you have lists of hashes of hashes and you want to sort on something deeper than the first level, then you can edit this code.
+
+h2. Usage:
+
+* Put jekyll&#95;sort.rb in your &#95;plugins directory.
+* Edit your &#95;config.yml to have a jekyll&#95;sort property and make it look something like this:
+
+bc. jekyll_sort:
+  - src: numbers
+    direction: up
+    dest: numbers_sorted
+  - src: posts
+    by: some_property
+    direction: down
+    dest: posts_sorted_by_something
+    
+* The dash src: attribute specifies what object to sort on. It needs to be in the site var.
+* The by: attribute is for sorting lists of hashes on some hash property. It is only required if you have a list of hashes.
+* The direction: attribute specifies what direction you want your list to be sorted (up | down). It is only required if you want to sort down. (It is "up" by default)
+* The dest: attribute specifies what site object should hold the sorted list.
+* Generate your pages like normal! Your sorted lists will be attached to your global site var under their dest attributes for every page.
+
+h2. Update History: (most recent first)
+* 20-Jun-2012 kyle paulsen -- First public release. 
