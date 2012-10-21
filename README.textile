@@ -20,13 +20,22 @@ bc. jekyll_sort:
     by: some_property
     direction: down
     dest: posts_sorted_by_something
-    
+  - src: all_content
+    by: sort
+    direction: down
+    dest: all_promoted_by_sort
+    include_tags: 
+    - promoted
+    - news
+
 * The dash src: attribute specifies what object to sort on. It needs to be in the site var.
-* The by: attribute is for sorting lists of hashes on some hash property. It is only required if you have a list of hashes.
+* The by: attribute is for sorting lists of hashes on some hash property. It is only required if you have a list of hashes.  Also, you can use an attribute called "sort" which will sort your content arbitrarily by the numeric weight you assign
 * The direction: attribute specifies what direction you want your list to be sorted (up | down). It is only required if you want to sort down. (It is "up" by default)
 * The dest: attribute specifies what site object should hold the sorted list.
 * Posts can be sorted by any property you define in your yaml front matter as well as the properties 'url', 'content' or 'date'
+* include_tags: reduce your new collection based on content that includes certain tags
 * Generate your pages like normal! Your sorted lists will be attached to your global site var under their dest attributes for every page.
+
 
 h2. Update History: (most recent first)
 * 21-Oct-2012 kyle paulsen -- allow posts to actually be sorted.
