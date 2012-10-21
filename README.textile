@@ -25,7 +25,9 @@ bc. jekyll_sort:
 * The by: attribute is for sorting lists of hashes on some hash property. It is only required if you have a list of hashes.
 * The direction: attribute specifies what direction you want your list to be sorted (up | down). It is only required if you want to sort down. (It is "up" by default)
 * The dest: attribute specifies what site object should hold the sorted list.
+* Posts can be sorted by any property you define in your yaml front matter as well as the properties 'url', 'content' or 'date'
 * Generate your pages like normal! Your sorted lists will be attached to your global site var under their dest attributes for every page.
 
 h2. Update History: (most recent first)
+* 21-Oct-2012 kyle paulsen -- allow posts to actually be sorted.
 * 20-Jun-2012 kyle paulsen -- First public release. 
