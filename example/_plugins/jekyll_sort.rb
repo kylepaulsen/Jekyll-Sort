@@ -13,9 +13,9 @@ module Jekyll
         postData = []
         site.posts.each { |post| 
           postHash = post.data
-          postHash['url'] = post.url
-          postHash['content'] = post.content
-          postHash['date'] = post.date
+          postHash['url'] ||= post.url
+          postHash['content'] ||= post.content
+          postHash['date'] ||= post.date
           postData.push(postHash)
         }
         config['posts'] = postData
