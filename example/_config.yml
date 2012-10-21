@@ -29,3 +29,23 @@ jekyll_sort:
     by: age
     direction: down
     dest: people_sorted_by_age_desc
+    
+  - src: posts
+    by: title
+    direction: down
+    dest: posts_sorted_by_title_desc
+    
+  - src: posts
+    by: date
+    direction: down
+    dest: posts_sorted_by_date_desc
+    
+  - src: posts
+    by: category
+    direction: up
+    dest: posts_sorted_by_category
+    
+  - src: posts
+    by: order
+    direction: up
+    dest: posts_sorted_by_order

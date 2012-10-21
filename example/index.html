@@ -32,7 +32,23 @@ jekyll_sort:<br>
 &nbsp;&nbsp;- src: people<br>
 &nbsp;&nbsp;&nbsp;&nbsp;by: age<br>
 &nbsp;&nbsp;&nbsp;&nbsp;direction: down<br>
-&nbsp;&nbsp;&nbsp;&nbsp;dest: people_sorted_by_age_desc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest: people_sorted_by_age_desc<br><br>
+&nbsp;&nbsp;- src: posts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;by: title<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction: down<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest: posts_sorted_by_title_desc<br><br>
+&nbsp;&nbsp;- src: posts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;by: date<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction: down<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest: posts_sorted_by_date_desc<br><br>
+&nbsp;&nbsp;- src: posts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;by: category<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction: up<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest: posts_sorted_by_category<br><br>
+&nbsp;&nbsp;- src: posts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;by: order<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction: up<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest: posts_sorted_by_order
 <br><br>
 Here is &#123;&#123; site.numbers }} <br><br>
 {{ site.numbers }}
@@ -52,6 +68,22 @@ here is &#123;&#123; site.people_sorted_by_name }} <br><br>
 
 here is &#123;&#123; site.people_sorted_by_age_desc }} <br><br>
 {{ site.people_sorted_by_age_desc }}
+<br><br>
+
+here is &#123;&#123; site.posts_sorted_by_date_desc }} <br><br>
+{{ site.posts_sorted_by_date_desc }}
+<br><br>
+
+here is &#123;&#123; site.posts_sorted_by_title_desc }} <br><br>
+{{ site.posts_sorted_by_title_desc }}
+<br><br>
+
+here is &#123;&#123; site.posts_sorted_by_category }} <br><br>
+{{ site.posts_sorted_by_category }}
+<br><br>
+
+here is &#123;&#123; site.posts_sorted_by_order }} <br><br>
+{{ site.posts_sorted_by_order }}
 <br><br>
 
 Here is the site var: <br><br>
